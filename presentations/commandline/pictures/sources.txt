@@ -1,0 +1,14 @@
+./commandline_blue.jpg  # http://www.flickr.com/photos/kjetikor/8484119632/
+./televideo925_terminal.jpg  # http://commons.wikimedia.org/wiki/File:Televideo925Terminal.jpg
+./server_room.jpg  # http://commons.wikimedia.org/wiki/File:A_view_of_the_server_room_at_The_National_Archives.jpg
+./qemu.png  # http://en.wikipedia.org/wiki/Criticism_of_Linux
+./compass.jpg  # http://en.wikipedia.org/wiki/Compass
+./sextant.jpg  # http://www.flickr.com/photos/michaelcarpentier/4378016700/
+./spyglass.jpg  # http://www.flickr.com/photos/leila-fotografie/5899490660/
+./cabinet.jpg  # http://www.flickr.com/photos/crystaltips/195110405/
+./files.jpg  # http://de.m.wikipedia.org/wiki/Datei:Karteikarten_der_Staatspolizeileitstelle_D%C3%BCsseldorf.jpg
+./productivity.jpg  # http://www.flickr.com/photos/samsungtomorrow/8677279196/
+./devices.jpg  # http://www.flickr.com/photos/angelaypablo/3778910786/
+./robots.jpg  # https://de.m.wikipedia.org/wiki/Datei:BMW_Leipzig_MEDIA_050719_Download_Karosseriebau_max.jpg
+pictures/microphone.jpg  # http://commons.wikimedia.org/wiki/File:Microphone.JPG
+pictures/thanks.jpg  # http://www.flickr.com/photos/slightlyblurred/9235803926/

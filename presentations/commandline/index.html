@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+	<title>Introduction to the Command Line</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="../../theme/style.css">
+  <script type="text/javascript" src="//use.typekit.net/ayv2sls.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>	
+	<style>
+		.slide.invert header.with-bg, 
+		.slide.shout header.with-bg,
+		.slide.shout-louder header.with-bg {
+			background-color: rgba(0,0,0,0.8);
+		}
+
+		.slide.shout section {
+			background-size: cover;
+			background-position: center;
+		}
+		
+		.slide pre.nonum code:before {
+			content: none;
+		}
+
+		.slide:after {
+			content: none;
+		}
+	</style>
+</head>
+
+<body class="list">
+
+  <nav class="meta">
+    <div class="container">
+      <a class="logo" href="http://opentechschool.org">OpenTechSchool</a>
+    </div>
+  </nav>
+    
+  	<header class="caption">
+  		<h1>Introduction to the Command Line</h1>
+  		<p>Discover an awsome tool built into a lot of operating systems.</p>
+  	</header>
+
+    <section class="slides">
+
+  	<div class="slide cover shout" id="Cover"><div>
+  		<section>
+  			<header>
+  				<h2>Introduction to the Command Line</h2>
+  				<p class="tagline">opentechschool.org</p>
+  			</header>
+  		</section>
+  	</div></div>
+	
+  	<div class="slide cover shout w" id="history"><div>
+  		<section style="background-image: url('pictures/terminal.jpg');">
+  			<header class="with-bg">
+  				<h2>History</h2>
+  			</header>
+  		</section>
+  	</div></div>
+  
+   <div class="slide cover shout w" id="remote"><div>
+      <section style="background-image: url('pictures/server_room.jpg');">
+        <header class="with-bg">
+          <h2>Access Remote Machines</h2>
+        </header>
+      </section>
+    </div></div>
+
+   <div class="slide cover shout w" id="ubiquity"><div>
+      <section style="background-image: url('pictures/devices.jpg');">
+        <header class="with-bg">
+          <h2>Ubiquity</h2>
+        </header>
+      </section>
+    </div></div>
+	
+   <div class="slide cover shout w" id="productivity"><div>
+      <section style="background-image: url('pictures/productivity.jpg');">
+        <header class="with-bg">
+          <h2>Productivity</h2>
+        </header>
+      </section>
+    </div></div>
+
+    <div class="slide cover shout w" id="start"><div>
+      <section style="background-image: url('pictures/commandline_blue.jpg');">
+        <header class="with-bg">
+          <h2>Getting Started</h2>
+        </header>
+      </section>
+    </div></div>
+
+		<div class="slide" id="Anatomy"><div>
+  		<section>
+  			<header>
+  				<h2>Anatomy</h2>
+  			</header>
+  			<pre class="nonum">
+  				<code>$ cat -n demo.txt</code></br>
+  				<code><mark>$</mark> cat -n demo.txt     # Prompt</code>
+  				<code>$ <mark>cat</mark> -n demo.txt     # Program</code>
+  				<code>$ cat <mark>-n</mark> demo.txt     # Flags (optional)</code>
+  				<code>$ cat -n <mark>demo.txt</mark>     # Parameters (optional)</code><br/>
+  				<code>$ man cat              # Show manual</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+    <div class="slide cover shout w" id="navigation"><div>
+      <section style="background-image: url('pictures/sextant.jpg');">
+        <header class="with-bg">
+          <h2>Navigation</h2>
+        </header>
+      </section>
+    </div></div>
+
+		<div class="slide" id="navigation_commands"><div>
+  		<section>
+  			<header>
+  				<h2>Navigation</h2>
+  			</header>
+  			<pre class="nonum">
+  				<code>$ pwd     # print working directory</code>
+  				<code>$ ls      # list directory contents</code>
+  				<code>$ cd      # change directory</code>
+  				<code>$ less    # file pager</code>
+  			</pre>
+  		</section>
+  	</div></div>
+	
+    <div class="slide cover shout w" id="files"><div>
+      <section style="background-image: url('pictures/files.jpg');">
+        <header class="with-bg">
+          <h2>Handling Files</h2>
+        </header>
+      </section>
+    </div></div>
+
+		<div class="slide" id="files_commands"><div>
+  		<section>
+  			<header>
+  				<h2>Handling Files</h2>
+  			</header>
+  			<pre class="nonum">
+  				<code>$ cat &lt;file&gt;                   # print file</code>
+  				<code>$ touch &lt;file&gt;                 # create file</code>
+  				<code>$ mv &lt;file&gt; &lt;destination&gt;      # move file</code>
+  				<code>$ cp &lt;file&gt; &lt;destination&gt;      # copy file</code>
+  				<code>$ rm &lt;file&gt;                    # remove file</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="directories_commands"><div>
+  		<section>
+  			<header>
+  				<h2>Handling Directories</h2>
+  			</header>
+  			<pre class="nonum">
+  				<code>$ mkdir &lt;direcotry&gt;                 # make directory</code>
+  				<code>$ mv &lt;directory&gt; &lt;destination&gt;      # move directory</code>
+  				<code>$ cp -r &lt;directory&gt; &lt;destination&gt;   # copy directory</code>
+  				<code>$ rm -r &lt;direcotry&gt;                 # remove directory</code>
+  			</pre>
+  		</section>
+  	</div></div>
+  
+    <div class="slide cover shout w" id="search"><div>
+      <section style="background-image: url('pictures/spyglass.jpg');">
+        <header class="with-bg">
+          <h2>Searching</h2>
+        </header>
+      </section>
+    </div></div>
+
+		<div class="slide" id="search_commands"><div>
+  		<section>
+  			<header>
+  				<h2>Searching for files</h2>
+  			</header>
+  			<pre class="nonum">
+  				<code>$ find &lt;path&gt; &lt;expression&gt;</code><br/>
+  				<code># All files ending with .txt</code>
+  				<code>$ find . -name "*.txt"</code><br/>
+  				<code># All files ending with .txt</code>
+  				<code># and changed in the last 10 minutes</code>
+  				<code>$ find . -name "*.txt" -ctime -10m</code><br/>
+  			</pre>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="grep_commands"><div>
+  		<section>
+  			<header>
+  				<h2>Searching inside files</h2>
+  			</header>
+  			<pre class="nonum">
+  				<code>$ grep &lt;pattern&gt; &lt;filename&gt;</code><br/>
+					<code># Search for "ots" in file foo.txt</code>
+  				<code>$ grep "ots" foo.txt   </code><br/>
+					<code># Recursively search for "ots"</code>
+					<code># in all files in the current directory</code>
+  				<code>$ grep "ots" -r .</code><br/>
+  			</pre>
+  		</section>
+  	</div></div>
+
+    <div class="slide cover shout w" id="pipes"><div>
+      <section style="background-image: url('pictures/pipes.jpg');">
+        <header class="with-bg">
+          <h2>Pipes and IO Redirect</h2>
+        </header>
+      </section>
+    </div></div>
+
+		<div class="slide" id="redirect_commands"><div>
+  		<section>
+  			<header>
+  				<h2>Redirecting Input and Output</h2>
+  			</header>
+  			<pre class="nonum">
+  				<code>$ cat book-1.txt book-2.txt &gt; book-full.txt</code><br/>
+  			</pre>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="pipes_commands"><div>
+  		<section>
+  			<header>
+  				<h2>Chaining Commands with Pipes</h2>
+  			</header>
+  			<pre class="nonum">
+  				<code>$ cat book-1.txt book-2.txt | grep "Flint" | wc -l </code><br/>
+  			</pre>
+  		</section>
+  	</div></div>
+
+    <div class="slide cover shout w" id="automation"><div>
+      <section style="background-image: url('pictures/robots.jpg');">
+        <header class="with-bg">
+          <h2>Automation</h2>
+        </header>
+      </section>
+    </div></div>
+
+		<div class="slide" id="automation_commands"><div>
+  		<section>
+  			<header>
+  				<h2>Automation</h2>
+  			</header>
+  			<pre class="nonum">
+  				<code>$ </code><br/>
+  			</pre>
+  		</section>
+  	</div></div>
+
+    <div class="slide cover shout w" id="questions"><div>
+      <section style="background-image: url('pictures/microphone.jpg');">
+        <header class="with-bg">
+          <h2>Questions / Feedback</h2>
+        </header>
+      </section>
+    </div></div>
+
+    <div class="slide cover shout w" id="thanks"><div>
+      <section style="background-image: url('pictures/thanks.jpg');">
+        <header class="with-bg">
+          <h2>Thanks</h2>
+        </header>
+      </section>
+    </div></div>
+
+  	<div class="slide" id="info"><div>
+  		<section>
+  			<header>
+  				<h2>Info</h2>
+  			</header>
+        <p>You can learn more about the OpenTechSchool via
+    			<ul>
+            <li><a href="http://twitter.com/opentechschool">@opentechschool</a></li>
+    				<li><a href="http://gplus.to/opentechschool">+OpenTechSchool</a></li>
+            <li><a href="http://facebook.com/opentechschool">fb.com/opentechschool</a></li>
+    				<li><a href="http://opentechschool.org">opentechschool.org</a></li>
+    				<li><a href="http://blog.opentechschool.org">blog.opentechschool.org</a></li>
+    			</ul>
+        </p>
+  			<p>Fork this presentation on <a href="https://github.com/OpenTechSchool/slides">Github</a>.</p>
+  		</section>
+  	</div></div>
+
+  	<div class="slide" id="images1"><div>
+  		<section>
+  			<header>
+  				<h2>Image sources 1</h2>
+  			</header>
+    			<ul>
+						<li><a href="http://commons.wikimedia.org/wiki/File:Televideo925Terminal.jpg">History</a></li>
+						<li><a href="http://commons.wikimedia.org/wiki/File:A_view_of_the_server_room_at_The_National_Archives.jpg">Access Remote Machines</a></li>
+						<li><a href="http://www.flickr.com/photos/angelaypablo/3778910786/">Ubiquity</a></li>
+						<li><a href="http://www.flickr.com/photos/samsungtomorrow/8677279196/">Productivity</a></li>
+						<li><a href="http://www.flickr.com/photos/kjetikor/8484119632/">Getting Started</a></li>
+						<li><a href="http://www.flickr.com/photos/michaelcarpentier/4378016700/">Navigation</a></li>
+    			</ul>
+  		</section>
+  	</div></div>
+
+  	<div class="slide" id="images2"><div>
+  		<section>
+  			<header>
+  				<h2>Image sources 2</h2>
+  			</header>
+    			<ul>
+						<li><a href="http://de.m.wikipedia.org/wiki/Datei:Karteikarten_der_Staatspolizeileitstelle_D%C3%BCsseldorf.jpg">Files</a></li>
+						<li><a href="http://www.flickr.com/photos/leila-fotografie/5899490660/">Searching</a></li>
+						<li><a href="http://www.flickr.com/photos/yinghai83/4744655749/">Pipes and IO Redirect</a></li>
+						<li><a href="https://de.m.wikipedia.org/wiki/Datei:BMW_Leipzig_MEDIA_050719_Download_Karosseriebau_max.jpg">Automation</a></li>
+						<li><a href="http://commons.wikimedia.org/wiki/File:Microphone.JPG">Questions</a></li>
+						<li><a href="http://www.flickr.com/photos/slightlyblurred/9235803926/">Thanks</a></li>
+    			</ul>
+  		</section>
+  	</div></div>
+	
+  	<!--
+  		To hide progress bar from entire presentation
+  		just remove “progress” element.
+  	<div class="progress"><div></div></div>
+  		-->
+
+  </section>
+	
+	<script src="../../lib/shower/scripts/script.js"></script>
+</body>
+</html>
