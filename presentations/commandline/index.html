@@ -95,7 +95,7 @@
       </section>
     </div></div>
 
-		<div class="slide" id="Anatomy"><div>
+		<div class="slide" id="anatomy"><div>
   		<section>
   			<header>
   				<h2>Anatomy</h2>
@@ -106,7 +106,25 @@
   				<code>$ <mark>cat</mark> -n demo.txt     # Program</code>
   				<code>$ cat <mark>-n</mark> demo.txt     # Flags (optional)</code>
   				<code>$ cat -n <mark>demo.txt</mark>     # Parameters (optional)</code><br/>
-  				<code>$ man cat              # Show manual</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="helpers"><div>
+  		<section>
+  			<header>
+  				<h2>Some little helpers</h2>
+  			</header>
+				<h3>Shortcuts</h3>
+				<p>
+					Tab for auto-completion</br>
+					Up and down arrow to cycle through last commands
+				</p>
+				<h3>Help</h3>
+  			<pre class="nonum">
+  				<code>$ man &lt;command&gt;</code>
+  				<code>$ &lt;command&gt; -h</code>
+  				<code>$ &lt;command&gt; --help</code>
   			</pre>
   		</section>
   	</div></div>
@@ -213,7 +231,7 @@
     <div class="slide cover shout w" id="pipes"><div>
       <section style="background-image: url('pictures/pipes.jpg');">
         <header class="with-bg">
-          <h2>Pipes and IO Redirect</h2>
+          <h2>IO Redirect and Pipes</h2>
         </header>
       </section>
     </div></div>
@@ -224,6 +242,11 @@
   				<h2>Redirecting Input and Output</h2>
   			</header>
   			<pre class="nonum">
+  				<code># Write directory list into file</code>
+  				<code>$ ls &gt; content.txt</code><br/>
+  				<code># Write the first ten lines into file</code>
+  				<code>$ head book-1.txt &gt; preview.txt</code><br/>
+  				<code># Concaternate files and write into single file</code>
   				<code>$ cat book-1.txt book-2.txt &gt; book-full.txt</code><br/>
   			</pre>
   		</section>
@@ -235,27 +258,35 @@
   				<h2>Chaining Commands with Pipes</h2>
   			</header>
   			<pre class="nonum">
+  				<code># Search for the word "Flint"</code>
+  				<code>$ grep "Flint" book-1.txt | less </code><br/>
+  				<code># Count how often "Flint" is written in the book</code>
   				<code>$ cat book-1.txt book-2.txt | grep "Flint" | wc -l </code><br/>
+  				<code># Extract the paths from a log file</code>
+  				<code>$ cat nasa.log | awk '{ print $7 }' | less</code><br/>
   			</pre>
   		</section>
   	</div></div>
 
-    <div class="slide cover shout w" id="automation"><div>
+    <div class="slide cover shout w" id="scripting"><div>
       <section style="background-image: url('pictures/robots.jpg');">
         <header class="with-bg">
-          <h2>Automation</h2>
+          <h2>Scripting</h2>
         </header>
       </section>
     </div></div>
 
-		<div class="slide" id="automation_commands"><div>
+		<div class="slide" id="scripting_example"><div>
   		<section>
   			<header>
-  				<h2>Automation</h2>
+  				<h2>Hello World</h2>
   			</header>
   			<pre class="nonum">
-  				<code>$ </code><br/>
-  			</pre>
+  				<code>#!/bin/bash</code>
+					<code>echo -n "Enter your name: "</code>
+					<code>read -e NAME</code>
+					<code>echo "Hello $NAME"</code>
+				</pre>
   		</section>
   	</div></div>
 
