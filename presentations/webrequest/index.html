@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+	<title>Introduction to the Command Line</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="../../theme/style.css">
+  <script type="text/javascript" src="//use.typekit.net/ayv2sls.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>	
+	<style>
+		.slide.invert header.with-bg, 
+		.slide.shout header.with-bg,
+		.slide.shout-louder header.with-bg {
+			background-color: rgba(0,0,0,0.8);
+		}
+
+		.slide.shout section {
+			background-size: cover;
+			background-position: center;
+		}
+		
+		.slide pre.nonum code:before {
+			content: none;
+		}
+
+		.slide:after {
+			content: none;
+		}
+
+		code.comment {
+			color: #666;
+		}
+	</style>
+</head>
+
+<body class="list">
+
+  <nav class="meta">
+    <div class="container">
+      <a class="logo" href="http://opentechschool.org">OpenTechSchool</a>
+    </div>
+  </nav>
+    
+  	<header class="caption">
+  		<h1>Anatomy of a Web Request</h1>
+  		<p>Discover what happens when you klick a link in your browser.</p>
+  	</header>
+
+    <section class="slides">
+
+  	<div class="slide cover shout" id="Cover"><div>
+  		<section>
+  			<header>
+					<h2>Anatomy of a<br/>Web Request</h2>
+  				<p class="tagline">opentechschool.org</p>
+  			</header>
+  		</section>
+  	</div></div>
+	
+  	<div class="slide cover shout w" id="overview"><div>
+  		<section style="background-image: url('pictures/sattelite.jpg');">
+  			<header class="with-bg">
+  				<h2>Overview</h2>
+  			</header>
+  		</section>
+  	</div></div>
+  
+   <div class="slide cover shout w" id="url"><div>
+      <section style="background-image: url('pictures/operator.jpg');">
+        <header class="with-bg">
+          <h2>URL</h2>
+        </header>
+      </section>
+    </div></div>
+
+   <div class="slide cover shout w" id="dns"><div>
+      <section style="background-image: url('pictures/operator.jpg');">
+        <header class="with-bg">
+          <h2>DNS</h2>
+        </header>
+      </section>
+    </div></div>
+
+   <div class="slide cover shout w" id="request"><div>
+      <section style="background-image: url('pictures/postcard.jpg');">
+        <header class="with-bg">
+          <h2>Request</h2>
+        </header>
+      </section>
+    </div></div>
+	
+   <div class="slide cover shout w" id="tcp"><div>
+      <section style="background-image: url('pictures/parcel.jpg');">
+        <header class="with-bg">
+          <h2>TCP</h2>
+        </header>
+      </section>
+    </div></div>
+
+    <div class="slide cover shout w" id="ip"><div>
+      <section style="background-image: url('pictures/post.jpg');">
+        <header class="with-bg">
+          <h2>IP</h2>
+        </header>
+      </section>
+    </div></div>
+
+    <div class="slide cover shout w" id="zoom"><div>
+      <section style="background-image: url('pictures/microscope.jpg');">
+        <header class="with-bg">
+          <h2>Closeup</h2>
+        </header>
+      </section>
+    </div></div>
+
+    <div class="slide cover shout w" id="request-start"><div>
+      <section style="background-image: url('pictures/request.jpg');">
+        <header class="with-bg">
+          <h2>The Request</h2>
+        </header>
+      </section>
+    </div></div>
+
+		<div class="slide" id="minimal-start"><div>
+  		<section>
+  			<header>
+  				<h2>Minimal Request</h2>
+  			</header>
+  			<pre class="nonum">
+					<code>GET /index.html HTTP/1.1</code>
+					<code>Host: learn.opentechschool.org</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="minimal-method"><div>
+  		<section>
+  			<header>
+  				<h2>Method</h2>
+  			</header>
+  			<pre class="nonum">
+					<code><mark>GET</mark> /index.html HTTP/1.1</code>
+					<code>Host: learn.opentechschool.org</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="minimal-resource"><div>
+  		<section>
+  			<header>
+  				<h2>Resource</h2>
+  			</header>
+  			<pre class="nonum">
+					<code>GET <mark>/index.html</mark> HTTP/1.1</code>
+					<code>Host: learn.opentechschool.org</code>
+  			</pre>
+  		</section>
+  	</div></div>
+ 
+		<div class="slide" id="minimal-protocol"><div>
+  		<section>
+  			<header>
+  				<h2>Version</h2>
+  			</header>
+  			<pre class="nonum">
+					<code>GET /index.html <mark>HTTP/1.1</mark></code>
+					<code>Host: learn.opentechschool.org</code>
+  			</pre>
+  		</section>
+  	</div></div>
+ 
+		<div class="slide" id="minimal-host"><div>
+  		<section>
+  			<header>
+  				<h2>Host</h2>
+  			</header>
+  			<pre class="nonum">
+					<code>GET /index.html HTTP/1.1</code>
+					<code><mark>Host: learn.opentechschool.org</mark></code>
+  			</pre>
+  		</section>
+  	</div></div>
+ 	</div></div>
+
+		<div class="slide" id="common"><div>
+  		<section>
+  			<header>
+  				<h2>Example Request</h2>
+  			</header>
+  			<pre class="nonum">
+					<code>GET /index.html HTTP/1.1</code>
+					<code>Host: learn.opentechschool.org</code>
+					<code>User-Agent: Mozilla/5.0; Macintosh; Intel Mac OS X 10.9</code>
+					<code>Accept: text/html,application/xhtml+xml,application/xml</code>
+					<code>Accept-Language: en-US,en;q=0.5</code>
+					<code>Accept-Encoding: gzip, deflate</code>
+					<code>DNT: 1</code>
+					<code>Connection: keep-alive</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+    <div class="slide cover shout w" id="response-start"><div>
+      <section style="background-image: url('pictures/response.jpg');">
+        <header class="with-bg">
+          <h2>The Response</h2>
+        </header>
+      </section>
+    </div></div>
+
+		<div class="slide" id="minimal-response-start"><div>
+  		<section>
+  			<header>
+  				<h2>Minimal Response</h2>
+  			</header>
+  			<pre class="nonum">
+					<code>HTTP/1.1 200 OK</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="minimal-response-version"><div>
+  		<section>
+  			<header>
+  				<h2>Version</h2>
+  			</header>
+  			<pre class="nonum">
+					<code><mark>HTTP/1.1</mark> 200 OK</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="minimal-response-status"><div>
+  		<section>
+  			<header>
+  				<h2>Status Code</h2>
+  			</header>
+  			<pre class="nonum">
+					<code>HTTP/1.1 <mark>200 OK</mark></code>
+  			</pre>
+        <p>
+    			<ul>
+						<li>1xx: Informational</li>
+						<li>2xx: Success</li>
+						<li>3xx: Redirection</li>
+						<li>4xx: Client Error</li>
+						<li>5xx: Server Error</li>
+					</ul>
+				</p>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="full-response-1"><div>
+  		<section>
+  			<header>
+  				<h2>Example Response</h2>
+  			</header>
+  			<pre class="nonum">
+					<code>HTTP/1.1 200 OK
+Server: GitHub.com
+Content-Type: text/html; charset=utf-8
+Expires: Tue, 04 Mar 2014 21:59:43 GMT
+Cache-Control: max-age=600
+Content-Length: 3056
+
+&lt;!doctype html&gt;
+...
+					</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+    <div class="slide cover shout w" id="cookies-start"><div>
+      <section style="background-image: url('pictures/cookies.jpg');">
+        <header class="with-bg">
+          <h2>Cookies</h2>
+        </header>
+      </section>
+    </div></div>
+
+    <div class="slide cover shout w" id="questions"><div>
+      <section style="background-image: url('pictures/microphone.jpg');">
+        <header class="with-bg">
+          <h2>Questions / Feedback</h2>
+        </header>
+      </section>
+    </div></div>
+
+  	<div class="slide" id="links"><div>
+  		<section>
+  			<header>
+  				<h2>Links</h2>
+  			</header>
+        <p>Tutorials
+    			<ul>
+            <li><a href="http://cli.learncodethehardway.org/book/">http://cli.learncodethehardway.org/book/</a></li>
+            <li><a href="http://linuxcommand.org/learning_the_shell.php">http://linuxcommand.org/learning_the_shell.php</a></li>
+            <li><a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html">http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html</a></li>
+					</ul>
+        Cheat Sheet
+    			<ul>
+    				<li><a href="http://overapi.com/linux/">http://overapi.com/linux/</a></li>
+    			</ul>
+        </p>
+  		</section>
+  	</div></div>
+
+    <div class="slide cover shout w" id="thanks"><div>
+      <section style="background-image: url('pictures/thanks.jpg');">
+        <header class="with-bg">
+          <h2>Thanks</h2>
+        </header>
+      </section>
+    </div></div>
+
+  	<div class="slide" id="info"><div>
+  		<section>
+  			<header>
+  				<h2>Info</h2>
+  			</header>
+        <p>You can learn more about the OpenTechSchool via
+    			<ul>
+            <li><a href="http://twitter.com/opentechschool">@opentechschool</a></li>
+    				<li><a href="http://gplus.to/opentechschool">+OpenTechSchool</a></li>
+            <li><a href="http://facebook.com/opentechschool">fb.com/opentechschool</a></li>
+    				<li><a href="http://opentechschool.org">opentechschool.org</a></li>
+    				<li><a href="http://blog.opentechschool.org">blog.opentechschool.org</a></li>
+    			</ul>
+        </p>
+  			<p>Fork this presentation on <a href="https://github.com/OpenTechSchool/slides">Github</a>.</p>
+  		</section>
+  	</div></div>
+
+  	<div class="slide" id="images1"><div>
+  		<section>
+  			<header>
+  				<h2>Image sources 1</h2>
+  			</header>
+    			<ul>
+						<li><a href="http://en.wikipedia.org/wiki/File:GPS_Satellite_NASA_art-iif.jpg">Overview</a></li>
+						<li><a href="http://en.wikipedia.org/wiki/File:Offutt_Air_Force_Base_operator.jpg">DNS</a></li>
+						<li><a href="http://www.flickr.com/photos/jcapaldi/6798276560/sizes/l/">Request</a></li>
+						<li><a href="http://en.wikipedia.org/wiki/File:Red_Cross_Parcel.jpg">Parcel</a></li>
+						<li><a href="http://commons.wikimedia.org/wiki/File:FedEx_truck,_Chicago,_IL.JPG">IP</a></li>
+						<li><a href="http://www.flickr.com/photos/mdpettitt/8671901426/sizes/h/">The Request</a></li>
+    			</ul>
+  		</section>
+  	</div></div>
+
+  	<div class="slide" id="images2"><div>
+  		<section>
+  			<header>
+  				<h2>Image sources 2</h2>
+  			</header>
+    			<ul>
+						<li><a href="http://www.flickr.com/photos/8042373@N03/2034052665/sizes/l/">Response</a></li>
+						<li><a href="http://en.wikipedia.org/wiki/File:Chocolate_Chip_Cookies_-_kimberlykv.jpg">Cookies</a></li>
+						<li><a href="http://www.flickr.com/photos/yinghai83/4744655749/">Pipes and IO Redirect</a></li>
+						<li><a href="https://de.m.wikipedia.org/wiki/Datei:BMW_Leipzig_MEDIA_050719_Download_Karosseriebau_max.jpg">Automation</a></li>
+						<li><a href="http://commons.wikimedia.org/wiki/File:Microphone.JPG">Questions</a></li>
+						<li><a href="http://www.flickr.com/photos/slightlyblurred/9235803926/">Thanks</a></li>
+    			</ul>
+  		</section>
+  	</div></div>
+	
+  	<!--
+  		To hide progress bar from entire presentation
+  		just remove “progress” element.
+  	<div class="progress"><div></div></div>
+  		-->
+
+  </section>
+	
+	<script src="../../lib/shower/scripts/script.js"></script>
+</body>
+</html>
