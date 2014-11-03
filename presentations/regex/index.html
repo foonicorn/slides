@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+	<title>Introduction to Regular Expressions</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="../../theme/style.css">
+	<style>
+		.slide.invert header.with-bg, 
+		.slide.shout header.with-bg,
+		.slide.shout-louder header.with-bg {
+			background-color: rgba(0,0,0,0.8);
+		}
+
+		.slide.shout section {
+			background-size: cover;
+			background-position: center;
+		}
+		
+		.slide pre.nonum code:before {
+			content: none;
+		}
+
+		.slide:after {
+			content: none;
+		}
+
+		span.highlight {
+			background-color: #EEE;
+			border: 1px solid #999;
+			border-radius: 5px;
+			padding: 5px 10px;
+			font-family: monospace;
+		}
+
+		code.comment {
+			color: #666;
+		}
+
+		input {
+			font-size: 1.2em;
+			width: 95%;
+			border-radius: 10px;
+			padding: 10px;
+			margin-bottom: 1em;
+		}
+
+		p.description {
+			margin-bottom: 1.5em;
+		}
+
+		div.target p {
+			margin-bottom: 0;
+		}
+		
+		div.target {
+			margin-bottom: 1em;
+		}
+	</style>
+</head>
+
+<body class="list">
+
+  <nav class="meta">
+    <div class="container">
+      <a class="logo" href="http://opentechschool.org">OpenTechSchool</a>
+    </div>
+  </nav>
+    
+  	<header class="caption">
+  		<h1>Regular Expressions</h1>
+  		<p>Search on Steroids</p>
+  	</header>
+
+    <section class="slides">
+
+  	<div class="slide cover shout" id="Cover"><div>
+  		<section>
+  			<header>
+					<h2>Regular Expressions</h2>
+  				<p class="tagline">opentechschool.org</p>
+  			</header>
+  		</section>
+  	</div></div>
+	
+  	<div class="slide cover shout w" id="overview"><div>
+  		<section style="background-image: url('pictures/pills.jpg');">
+  			<header class="with-bg">
+  				<h2>Search on Steroids</h2>
+  			</header>
+  		</section>
+  	</div></div>
+  
+	<div class="slide" id="one"><div>
+  		<section>
+  			<header>
+  				<h2>Basic search</h2>
+  			</header>
+			<input class="regex" placeholder="regexp"/>
+			<div class="target">
+				<p>We're knights of the round table, we dance whene're we're able.</p>
+				<p>We do routines, and border scenes, and footwork imp-e-cable;</p>
+				<p>We dine well here in Camelot, we eat ham and jam and spamalot.</p>
+			</p>
+  		</section>
+  	</div></div>
+
+  	<div class="slide cover shout w" id="meta"><div>
+  		<section style="background-image: url('pictures/rescue.jpg');">
+  			<header class="with-bg">
+				<h2>Metacharacters</br>to the rescue</h2>
+  			</header>
+  		</section>
+  	</div></div>
+
+	<div class="slide" id="two"><div>
+  		<section>
+  			<header>
+  				<h2>Wildcard</h2>
+  			</header>
+			<p class="description">
+				<span class="highlight">.</span> matches any single letter</br>
+			</p>
+			<input class="regex" placeholder="regexp"/>
+			<div class="target">
+				<p>mood good hood food</p>
+				<p>soon moon food boot</p>
+			</div>
+  		</section>
+  	</div></div>
+
+	<div class="slide" id="Three"><div>
+  		<section>
+  			<header>
+  				<h2>Repetition</h2>
+  			</header>
+			<p class="description">
+				<span class="highlight">?</span> matches the preceding character 0 or 1 time</br>
+				<span class="highlight">+</span> matches the preceding character 1 or more times</br>
+				<span class="highlight">*</span> matches the preceding character 0 or more times</br>
+			</p>
+			<input class="regex" placeholder="regexp"/>
+			<div class="target">
+				<p>lot loot for foot</p>
+				<p>soon moon food boot</p>
+			</div>
+  		</section>
+  	</div></div>
+
+
+		<div class="slide" id="minimal-response-version"><div>
+  		<section>
+  			<header>
+  				<h2>Version</h2>
+  			</header>
+  			<pre class="nonum">
+					<code><mark>HTTP/1.1</mark> 200 OK</code>
+  			</pre>
+  		</section>
+  	</div></div>
+
+		<div class="slide" id="minimal-response-status"><div>
+  		<section>
+  			<header>
+  				<h2>Status Code</h2>
+  			</header>
+  			<pre class="nonum">
+					<code>HTTP/1.1 <mark>200 OK</mark></code>
+  			</pre>
+        <p>
+    			<ul>
+						<li>1xx: Informational</li>
+						<li>2xx: Success</li>
+						<li>3xx: Redirection</li>
+						<li>4xx: Client Error</li>
+						<li>5xx: Server Error</li>
+					</ul>
+				</p>
+  		</section>
+  	</div></div>
+
+
+    <div class="slide cover shout w" id="questions"><div>
+      <section style="background-image: url('pictures/microphone.jpg');">
+        <header class="with-bg">
+          <h2>Questions / Feedback</h2>
+        </header>
+      </section>
+    </div></div>
+
+  	<div class="slide" id="links"><div>
+  		<section>
+  			<header>
+  				<h2>Links</h2>
+  			</header>
+        <p>
+    			<ul>
+            <li><a href="http://www.rfc-editor.org/rfc/rfc2068.txt">RFC 2068 (HTTP 1.1)</a></li>
+            <li><a href="http://www.rfc-editor.org/rfc/rfc6265.txt">RFC 6265 (HTTP State Management)</a></li>
+					</ul>
+        </p>
+  		</section>
+  	</div></div>
+
+    <div class="slide cover shout w" id="thanks"><div>
+      <section style="background-image: url('pictures/thanks.jpg');">
+        <header class="with-bg">
+          <h2>Thanks</h2>
+        </header>
+      </section>
+    </div></div>
+
+  	<div class="slide" id="info"><div>
+  		<section>
+  			<header>
+  				<h2>Info</h2>
+  			</header>
+        <p>You can learn more about the OpenTechSchool via
+    			<ul>
+            <li><a href="http://twitter.com/opentechschool">@opentechschool</a></li>
+    				<li><a href="http://gplus.to/opentechschool">+OpenTechSchool</a></li>
+            <li><a href="http://facebook.com/opentechschool">fb.com/opentechschool</a></li>
+    				<li><a href="http://opentechschool.org">opentechschool.org</a></li>
+    				<li><a href="http://blog.opentechschool.org">blog.opentechschool.org</a></li>
+    			</ul>
+        </p>
+  			<p>Fork this presentation on <a href="https://github.com/OpenTechSchool/slides">Github</a>.</p>
+  		</section>
+  	</div></div>
+
+  	<div class="slide" id="images1"><div>
+  		<section>
+  			<header>
+  				<h2>Image sources 1</h2>
+  			</header>
+    			<ul>
+						<li><a href="http://en.wikipedia.org/wiki/File:GPS_Satellite_NASA_art-iif.jpg">Overview</a></li>
+						<li><a href="http://en.wikipedia.org/wiki/File:Offutt_Air_Force_Base_operator.jpg">DNS</a></li>
+						<li><a href="http://www.flickr.com/photos/jcapaldi/6798276560/sizes/l/">Request</a></li>
+						<li><a href="http://en.wikipedia.org/wiki/File:Red_Cross_Parcel.jpg">Parcel</a></li>
+						<li><a href="http://commons.wikimedia.org/wiki/File:FedEx_truck,_Chicago,_IL.JPG">IP</a></li>
+						<li><a href="http://www.flickr.com/photos/mdpettitt/8671901426/sizes/h/">The Request</a></li>
+    			</ul>
+  		</section>
+  	</div></div>
+
+  	<div class="slide" id="images2"><div>
+  		<section>
+  			<header>
+  				<h2>Image sources 2</h2>
+  			</header>
+    			<ul>
+						<li><a href="http://www.flickr.com/photos/8042373@N03/2034052665/sizes/l/">Response</a></li>
+						<li><a href="http://en.wikipedia.org/wiki/File:Chocolate_Chip_Cookies_-_kimberlykv.jpg">Cookies</a></li>
+						<li><a href="http://commons.wikimedia.org/wiki/File:Microphone.JPG">Questions</a></li>
+						<li><a href="http://www.flickr.com/photos/slightlyblurred/9235803926/">Thanks</a></li>
+    			</ul>
+  		</section>
+  	</div></div>
+	
+  	<!--
+  		To hide progress bar from entire presentation
+  		just remove “progress” element.
+  	<div class="progress"><div></div></div>
+  		-->
+
+  </section>
+	
+	<script type="text/javascript" src="../../lib/shower/scripts/script.js"></script>
+	<script type="text/javascript" src="../../lib/jquery-2.1.1.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			$('input.regex').each(function(index, item) {
+				var 
+					input = $(item),
+					targets = input.parent().find('div.target p')
+				;
+				
+				$.each(targets, function(index, item) {
+					var target = $(item);
+					target.data('original', target.data('original') || target.html());
+				});
+
+				input.on('keydown', function(event) {
+					event.stopImmediatePropagation();
+				});
+
+				input.on('change', function(event) {
+					var 
+						pattern = event.target.value,
+						re = new RegExp(pattern, 'g')
+					;
+					$.each(targets, function(index, item) {
+						var target = $(item);
+						target.html(target.data('original').replace(re, '<mark>$&</mark>'));
+					});
+				});
+			})
+		});
+	</script>
+</body>
+</html>
